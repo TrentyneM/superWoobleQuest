@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcfw4jydpkoy"]
+
+[ext_resource type="Texture2D" uid="uid://kcr1011n51d0" path="res://powerup.png" id="2_6cuax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_to7bl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xu7g1"]
+radius = 12.0415945
+
+[node name="powerup" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6cuax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_to7bl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xu7g1")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://db5xrh81e6oew"]
+
+[ext_resource type="Script" uid="uid://b43y1aiow4uhr" path="res://endscreen.gd" id="1_sug1e"]
+
+[node name="endscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sug1e")
+
+[node name="endtext" type="Label" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 242.0
+offset_right = 968.0
+offset_bottom = 269.0
+text = "You've made it to the Communications Tower! Now you have escaped the woobles of this planet! "
+
+[node name="restartbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 323.0
+offset_right = 793.0
+offset_bottom = 372.0
+text = "Restart Game"
+
+[connection signal="pressed" from="restartbutton" to="." method="_on_restartbutton_pressed"]

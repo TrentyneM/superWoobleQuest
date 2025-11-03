@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://ni1woorm5vuq"]
+
+[ext_resource type="Script" uid="uid://btd8wm41cansp" path="res://cutscene.gd" id="1_ye7fo"]
+[ext_resource type="Texture2D" uid="uid://dlixl2ps5vmqp" path="res://thedude.png" id="2_p30sb"]
+[ext_resource type="Texture2D" uid="uid://j6q5qhnvcg4v" path="res://Grass.png" id="3_53jq0"]
+[ext_resource type="Texture2D" uid="uid://b56bc05anc0d7" path="res://enemyguy.png" id="4_3q24f"]
+[ext_resource type="Texture2D" uid="uid://bnut68ox3rk5j" path="res://sunblock.png" id="5_8ye5a"]
+[ext_resource type="Texture2D" uid="uid://f58bagxgml1k" path="res://coin.png" id="6_qcoa3"]
+
+[node name="cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ye7fo")
+
+[node name="startbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 427.0
+offset_right = 692.0
+offset_bottom = 461.0
+text = "Begin the Quest!"
+
+[node name="gametext" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 327.0
+offset_right = 1113.0
+offset_bottom = 350.0
+text = "The alien needs your help to get back to the spaceship outpost, help him get to the communication tower, and defeat all all the woobles."
+
+[node name="Thedude" type="Sprite2D" parent="."]
+position = Vector2(232.00002, 433)
+scale = Vector2(3.34375, 3.40625)
+texture = ExtResource("2_p30sb")
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(235.00003, 535)
+scale = Vector2(6, 6.1875)
+texture = ExtResource("3_53jq0")
+
+[node name="Enemyguy" type="Sprite2D" parent="."]
+position = Vector2(911.99994, 94.999985)
+scale = Vector2(4.4375, 4.4375)
+texture = ExtResource("4_3q24f")
+
+[node name="Sunblock" type="Sprite2D" parent="."]
+position = Vector2(158.5, 209.5)
+scale = Vector2(3.6875, 3.5625)
+texture = ExtResource("5_8ye5a")
+
+[node name="Sunblock2" type="Sprite2D" parent="."]
+position = Vector2(303.99997, 93)
+scale = Vector2(4.5625, 4.5625)
+texture = ExtResource("5_8ye5a")
+
+[node name="Grass2" type="Sprite2D" parent="."]
+position = Vector2(915.5, 548.75)
+scale = Vector2(4.1874943, 4.2812476)
+texture = ExtResource("3_53jq0")
+
+[node name="Grass2" type="Sprite2D" parent="Grass2"]
+position = Vector2(929, 561.5)
+scale = Vector2(3.25, 3.4375)
+texture = ExtResource("3_53jq0")
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(259, 279)
+texture = ExtResource("6_qcoa3")
+
+[node name="Coin2" type="Sprite2D" parent="."]
+position = Vector2(349, 194)
+texture = ExtResource("6_qcoa3")
+
+[node name="Coin3" type="Sprite2D" parent="."]
+position = Vector2(928, 462)
+texture = ExtResource("6_qcoa3")
+
+[connection signal="pressed" from="startbutton" to="." method="_on_startbutton_pressed"]
